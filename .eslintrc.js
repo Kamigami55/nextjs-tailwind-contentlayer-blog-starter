@@ -14,6 +14,16 @@ module.exports = {
       },
     ],
   },
+  settings: {
+    // Support absolute imports
+    // https://www.npmjs.com/package/eslint-import-resolver-alias
+    'import/resolver': {
+      alias: {
+        map: [['@', './src']],
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+      },
+    },
+  },
   overrides: [
     {
       files: '**/*.{ts,tsx}',
