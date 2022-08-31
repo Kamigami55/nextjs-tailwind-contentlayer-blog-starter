@@ -40,3 +40,6 @@ next-env.d.ts
 .contentlayer
 
 # ============================ ./Copied from .gitignore ============================
+
+# Ignore contentlayer eslint errors
+contentLayerAdapter.js

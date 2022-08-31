@@ -23,6 +23,7 @@ module.exports = {
         extensions: ['.js', '.jsx', '.ts', '.tsx'],
       },
     },
+    'import/ignore': ['contentLayerAdapter.js'],
   },
   overrides: [
     {

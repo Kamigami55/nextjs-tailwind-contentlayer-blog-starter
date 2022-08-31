@@ -1,4 +1,4 @@
-import { defineDocumentType, makeSource } from 'contentlayer/source-files';
+import { defineDocumentType, makeSource } from './src/lib/contentLayerAdapter';
 
 export const Post = defineDocumentType(() => ({
   name: 'Post',
