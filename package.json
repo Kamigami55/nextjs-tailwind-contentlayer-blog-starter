@@ -11,7 +11,9 @@
     "format:fix": "prettier --write './**/*.{css,scss,md,mdx,json}'"
   },
   "dependencies": {
+    "contentlayer": "^0.2.7",
     "next": "12.2.5",
+    "next-contentlayer": "^0.2.7",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
