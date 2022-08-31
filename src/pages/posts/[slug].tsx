@@ -1,6 +1,7 @@
 import { format, parseISO } from 'date-fns';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Head from 'next/head';
+import { useMDXComponent } from 'next-contentlayer/hooks';
 
 import { allPosts, Post } from '@/lib/contentLayerAdapter';
 import styles from '@/styles/Home.module.css';
@@ -32,6 +33,8 @@ type Props = {
 };
 
 const PostPage: NextPage<Props> = ({ post }) => {
+  const MDXContent = useMDXComponent(post.body.code);
+
   return (
     <div className={styles.container}>
       <Head>
@@ -47,7 +50,7 @@ const PostPage: NextPage<Props> = ({ post }) => {
           {format(parseISO(post.date), 'LLLL d, yyyy')}
         </time>
 
-        <div dangerouslySetInnerHTML={{ __html: post.body.html }} />
+        <MDXContent />
       </main>
     </div>
   );
