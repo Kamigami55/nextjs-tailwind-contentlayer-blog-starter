@@ -3,4 +3,5 @@ module.exports = {
   singleQuote: true,
   printWidth: 80,
   semi: true,
+  plugins: ['prettier-plugin-tailwindcss'],
 };
