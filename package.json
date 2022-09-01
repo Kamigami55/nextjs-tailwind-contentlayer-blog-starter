@@ -11,6 +11,7 @@
     "format:fix": "prettier --write './**/*.{css,scss,md,mdx,json}'"
   },
   "dependencies": {
+    "clsx": "^1.2.1",
     "contentlayer": "^0.2.7",
     "date-fns": "^2.29.2",
     "next": "12.2.5",
