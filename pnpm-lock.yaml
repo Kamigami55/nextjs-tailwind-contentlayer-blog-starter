@@ -28,6 +28,7 @@ specifiers:
   eslint-plugin-tailwindcss: ^3.6.1
   next: 12.2.5
   next-contentlayer: ^0.2.7
+  next-themes: ^0.2.0
   postcss: ^8.4.16
   prettier: ^2.7.1
   prettier-plugin-tailwindcss: ^0.1.13
@@ -41,6 +42,7 @@ dependencies:
   date-fns: 2.29.2
   next: 12.2.5_rlaikcoslzwwtqyk7brpdzej5y
   next-contentlayer: 0.2.7_rizxwgpvmkfzbw4dlhztdp4raa
+  next-themes: 0.2.0_3xcjr4wz26biff45sz3jtokgje
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
 
@@ -3667,6 +3669,18 @@ packages:
       - esbuild
       - markdown-wasm
       - supports-color
+    dev: false
+
+  /next-themes/0.2.0_3xcjr4wz26biff45sz3jtokgje:
+    resolution: {integrity: sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 12.2.5_rlaikcoslzwwtqyk7brpdzej5y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /next/12.2.5_rlaikcoslzwwtqyk7brpdzej5y:
