@@ -1,4 +1,12 @@
 .postBody {
+  :global(.rehype-code-title) {
+    @apply -mb-3 rounded-tl rounded-tr bg-slate-600 px-4 pt-1 pb-2 font-mono text-sm text-gray-200;
+  }
+
+  div:global(.rehype-code-title) + pre {
+    @apply rounded-tl-none rounded-tr-none;
+  }
+
   img {
     @apply ml-auto mr-auto;
   }
