@@ -10,12 +10,12 @@ type: Post
 
 Some other posts! with `some inline code`!
 
-```js showLineNumbers
+```js:sample.js showLineNumbers
 const a = 1;
 a = 2;
 ```
 
-```tsx showLineNumbers {5,15-17}
+```tsx:App.tsx showLineNumbers {5,15-17}
 import "@/styles/globals.css";
 
 import type { AppProps } from "next/app";
@@ -40,14 +40,14 @@ function MyApp({ Component, pageProps }: AppProps) {
 export default MyApp;
 ```
 
-```diff-js showLineNumbers {3-4}
+```diff-js:some.js showLineNumbers {3-4}
 const a = 1;
 - a = 2;
 + a = 2;
 a = 3;
 ```
 
-```shell
+```shell:Command
 $ echo "Hello world!"
 ```
 
