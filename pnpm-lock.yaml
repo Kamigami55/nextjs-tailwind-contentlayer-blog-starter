@@ -37,6 +37,7 @@ specifiers:
   prettier-plugin-tailwindcss: ^0.1.13
   react: 18.2.0
   react-dom: 18.2.0
+  sass: ^1.54.8
   tailwindcss: ^3.1.8
   typescript: ^4.8.2
 
@@ -44,7 +45,7 @@ dependencies:
   clsx: 1.2.1
   contentlayer: 0.2.7_esbuild@0.15.6
   date-fns: 2.29.2
-  next: 12.2.5_rlaikcoslzwwtqyk7brpdzej5y
+  next: 12.2.5_vacqwbuyxbzotnxzwfnqkw74su
   next-contentlayer: 0.2.7_rizxwgpvmkfzbw4dlhztdp4raa
   next-themes: 0.2.0_3xcjr4wz26biff45sz3jtokgje
   react: 18.2.0
@@ -79,6 +80,7 @@ devDependencies:
   postcss: 8.4.16
   prettier: 2.7.1
   prettier-plugin-tailwindcss: 0.1.13_prettier@2.7.1
+  sass: 1.54.8
   tailwindcss: 3.1.8_postcss@8.4.16
   typescript: 4.8.2
 
@@ -4172,6 +4174,9 @@ packages:
     engines: {node: '>=14.0.0'}
     dev: false
 
+  /immutable/4.1.0:
+    resolution: {integrity: sha512-oNkuqVTA8jqG1Q6c+UglTOD1xhC1BtjKI7XkCXRkZHrN5m18/XsnUp8Q89GkQO/z+0WjonSvl0FLhDYftp46nQ==}
+
   /import-fresh/3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -4994,7 +4999,7 @@ packages:
     dependencies:
       '@contentlayer/core': 0.2.7_esbuild@0.15.6
       '@contentlayer/utils': 0.2.7
-      next: 12.2.5_rlaikcoslzwwtqyk7brpdzej5y
+      next: 12.2.5_vacqwbuyxbzotnxzwfnqkw74su
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     transitivePeerDependencies:
@@ -5011,12 +5016,12 @@ packages:
       react: '*'
       react-dom: '*'
     dependencies:
-      next: 12.2.5_rlaikcoslzwwtqyk7brpdzej5y
+      next: 12.2.5_vacqwbuyxbzotnxzwfnqkw74su
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
 
-  /next/12.2.5_rlaikcoslzwwtqyk7brpdzej5y:
+  /next/12.2.5_vacqwbuyxbzotnxzwfnqkw74su:
     resolution: {integrity: sha512-tBdjqX5XC/oFs/6gxrZhjmiq90YWizUYU6qOWAfat7zJwrwapJ+BYgX2PmiacunXMaRpeVT4vz5MSPSLgNkrpA==}
     engines: {node: '>=12.22.0'}
     hasBin: true
@@ -5040,6 +5045,7 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      sass: 1.54.8
       styled-jsx: 5.0.4_ucuhn75irpsvlf3yq3xnib3jky
       use-sync-external-store: 1.2.0_react@18.2.0
     optionalDependencies:
@@ -5651,6 +5657,15 @@ packages:
 
   /safe-buffer/5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
+
+  /sass/1.54.8:
+    resolution: {integrity: sha512-ib4JhLRRgbg6QVy6bsv5uJxnJMTS2soVcCp9Y88Extyy13A8vV0G1fAwujOzmNkFQbR3LvedudAMbtuNRPbQww==}
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.1.0
+      source-map-js: 1.0.2
 
   /scheduler/0.23.0:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
