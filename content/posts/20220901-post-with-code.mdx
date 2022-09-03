@@ -1,0 +1,69 @@
+---
+title: Post with code
+description: My post with code
+slug: post-with-code
+date: 2022-09-01
+type: Post
+---
+
+## Some post with code!
+
+Some other posts! with `some inline code`!
+
+```js
+const a = 1;
+a = 2;
+```
+
+```tsx
+import "@/styles/globals.css";
+
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import { ThemeProvider } from "next-themes";
+
+import LayoutWrapper from "@/components/LayoutWrapper";
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <ThemeProvider attribute="class">
+      <Head>
+        <meta name="viewport" content="viewport-fit=cover" />
+      </Head>
+      <LayoutWrapper>
+        <Component {...pageProps} />
+      </LayoutWrapper>
+    </ThemeProvider>
+  );
+}
+
+export default MyApp;
+```
+
+```shell
+$ echo "Hello world!"
+```
+
+```python
+print("Hello world!")
+```
+
+```java
+System.out.println("Hello world!");
+```
+
+```csharp
+Console.WriteLine("Hello world!");
+```
+
+```c
+printf("Hello world!");
+```
+
+```cpp
+std::cout << "Hello world!";
+```
+
+```go
+fmt.Println("Hello world!")
+```
