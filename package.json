@@ -22,7 +22,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rehype-code-titles": "^1.1.0",
-    "rehype-prism-plus": "^1.5.0"
+    "rehype-prism-plus": "^1.5.0",
+    "rehype-slug": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
