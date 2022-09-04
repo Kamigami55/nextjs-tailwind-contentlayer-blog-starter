@@ -5,6 +5,7 @@ import { ArticleJsonLd } from 'next-seo';
 import PostList, { PostForPostList } from '@/components/PostList';
 import { siteConfigs } from '@/configs/siteConfigs';
 import { allPostsNewToOld } from '@/lib/contentLayerAdapter';
+import generateRSS from '@/lib/generateRSS';
 
 type PostForIndexPage = PostForPostList;
 
@@ -20,6 +21,9 @@ export const getStaticProps: GetStaticProps<Props> = () => {
     description: post.description,
     path: post.path,
   })) as PostForIndexPage[];
+
+  generateRSS();
+
   return { props: { posts } };
 };
 

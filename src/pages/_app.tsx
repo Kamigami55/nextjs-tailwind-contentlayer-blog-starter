@@ -45,6 +45,16 @@ function MyApp({ Component, pageProps }: AppProps) {
             rel: 'icon',
             href: siteConfigs.logoPath,
           },
+          {
+            rel: 'alternate',
+            type: 'application/rss+xml',
+            href: '/feed.xml',
+          },
+          {
+            rel: 'alternate',
+            type: 'application/atom+xml',
+            href: '/atom.xml',
+          },
         ]}
       />
 

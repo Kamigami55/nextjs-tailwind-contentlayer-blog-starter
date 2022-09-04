@@ -1,6 +1,8 @@
 import { siteConfigs } from '@/configs/siteConfigs';
 
-export const getPostOGImage = (socialImage: string | null): string => {
+export const getPostOGImage = (
+  socialImage: string | null | undefined
+): string => {
   if (!socialImage) {
     return siteConfigs.bannerUrl;
   }
