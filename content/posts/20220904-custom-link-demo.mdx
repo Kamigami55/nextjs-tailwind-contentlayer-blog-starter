@@ -1,0 +1,31 @@
+---
+title: Custom Link demo
+description: Custom Link demo
+slug: custom-link-demo
+date: 2022-09-04
+type: Post
+---
+
+import LinksDemo from '../../src/components/LinksDemo';
+
+## Links in Markdown
+
+Internal link [Go to homepage](/)
+
+External link [Go to Google](https://google.com)
+
+Anchor link [Go to H2 title](#h2-title)
+
+---
+
+## Image as external link
+
+[![Photo by Anita Chong on Unsplash](/images/anita-chong-unsplash.jpg)](https://unsplash.com/photos/aSJAalMXCvI)
+
+> Photo by [Anita Chong](https://unsplash.com/@jacutanita) on [Unsplash](https://unsplash.com/photos/aSJAalMXCvI)
+
+---
+
+## Render MDX component (with a links inside)
+
+<LinksDemo />
