@@ -23,6 +23,10 @@ const nextConfig = withContentlayer({
     // your project has type errors.
     ignoreBuildErrors: true,
   },
+  images: {
+    // Enable modern image formats
+    formats: ['image/avif', 'image/webp'],
+  },
 });
 
 export default nextConfig;
