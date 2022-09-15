@@ -6,6 +6,7 @@ import {
   CustomH5,
   CustomH6,
 } from '@/components/CustomHeading';
+import CustomImage from '@/components/CustomImage';
 import CustomLink from '@/components/CustomLink';
 import CustomPre from '@/components/CustomPre';
 
@@ -19,6 +20,7 @@ const mdxComponents = {
   h6: CustomH6,
   pre: CustomPre,
   a: CustomLink,
+  img: CustomImage,
 };
 
 export default mdxComponents;
