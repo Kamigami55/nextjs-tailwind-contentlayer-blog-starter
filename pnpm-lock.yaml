@@ -7,6 +7,7 @@ specifiers:
   '@svgr/webpack': ^6.3.1
   '@tailwindcss/typography': ^0.5.7
   '@types/node': ^18.7.13
+  '@types/nprogress': ^0.2.0
   '@types/react': 18.0.17
   '@types/react-dom': 18.0.6
   '@typescript-eslint/eslint-plugin': ^5.35.1
@@ -36,6 +37,7 @@ specifiers:
   next-seo: ^5.5.0
   next-sitemap: ^3.1.21
   next-themes: ^0.2.0
+  nprogress: ^0.2.0
   plaiceholder: ^2.5.0
   postcss: ^8.4.16
   prettier: ^2.7.1
@@ -61,6 +63,7 @@ dependencies:
   next-contentlayer: 0.2.7_3xcjr4wz26biff45sz3jtokgje
   next-seo: 5.5.0_3xcjr4wz26biff45sz3jtokgje
   next-themes: 0.2.0_3xcjr4wz26biff45sz3jtokgje
+  nprogress: 0.2.0
   plaiceholder: 2.5.0_sharp@0.31.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -77,6 +80,7 @@ devDependencies:
   '@svgr/webpack': 6.3.1
   '@tailwindcss/typography': 0.5.7_tailwindcss@3.1.8
   '@types/node': 18.7.13
+  '@types/nprogress': 0.2.0
   '@types/react': 18.0.17
   '@types/react-dom': 18.0.6
   '@typescript-eslint/eslint-plugin': 5.35.1_pfwtupu3r4wxmgbx6hj7gwmyuu
@@ -2245,6 +2249,10 @@ packages:
 
   /@types/node/18.7.13:
     resolution: {integrity: sha512-46yIhxSe5xEaJZXWdIBP7GU4HDTG8/eo0qd9atdiL+lFpA03y8KS+lkTN834TWJj5767GbWv4n/P6efyTFt1Dw==}
+
+  /@types/nprogress/0.2.0:
+    resolution: {integrity: sha512-1cYJrqq9GezNFPsWTZpFut/d4CjpZqA0vhqDUPFWYKF1oIyBz5qnoYMzR+0C/T96t3ebLAC1SSnwrVOm5/j74A==}
+    dev: true
 
   /@types/parse-json/4.0.0:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
@@ -5587,6 +5595,10 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
+  /nprogress/0.2.0:
+    resolution: {integrity: sha512-I19aIingLgR1fmhftnbWWO3dXc0hSxqHQHQb3H8m+K3TnEn/iSeTZZOyvKXWqQESMwuUVnatlCnZdLBZZt2VSA==}
+    dev: false
+
   /nth-check/2.1.1:
     resolution: {integrity: sha512-lqjrjmaOoAnWfMmBPL+XNnynZh2+swxiX3WUE0s4yEHI6m+AwrK2UZOimIRl3X/4QctVqS8AiZjFqyOGrMXb/w==}
     dependencies:
@@ -6650,7 +6662,7 @@ packages:
   /tunnel-agent/0.6.0:
     resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
     dependencies:
-      safe-buffer: 5.1.2
+      safe-buffer: 5.2.1
     dev: false
 
   /typanion/3.9.0:
