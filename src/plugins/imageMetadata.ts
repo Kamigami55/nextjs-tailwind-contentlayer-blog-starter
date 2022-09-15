@@ -6,6 +6,7 @@
 // https://github.com/JS-DevTools/rehype-inline-svg/blob/master/src/inline-svg.ts
 import imageSize from 'image-size';
 import path from 'path';
+import { getPlaiceholder } from 'plaiceholder';
 import { Node, visit } from 'unist-util-visit';
 import { promisify } from 'util';
 
@@ -21,6 +22,7 @@ interface ImageNode extends Node {
     src: string;
     height?: number;
     width?: number;
+    base64?: string;
   };
 }
 
@@ -53,9 +55,11 @@ async function addMetadata(node: ImageNode): Promise<void> {
   );
 
   if (!res) throw Error(`Invalid image with src "${node.properties.src}"`);
+  const { base64 } = await getPlaiceholder(node.properties.src, { size: 10 }); // 10 is to increase detail (default is 4)
 
   node.properties.width = res.width;
   node.properties.height = res.height;
+  node.properties.base64 = base64;
 }
 
 /**
