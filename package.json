@@ -15,6 +15,7 @@
     "contentlayer": "^0.2.7",
     "date-fns": "^2.29.2",
     "feed": "^4.2.2",
+    "image-size": "^1.0.2",
     "next": "12.2.5",
     "next-contentlayer": "^0.2.7",
     "next-seo": "^5.5.0",
@@ -23,7 +24,8 @@
     "react-dom": "18.2.0",
     "rehype-code-titles": "^1.1.0",
     "rehype-prism-plus": "^1.5.0",
-    "rehype-slug": "^5.0.1"
+    "rehype-slug": "^5.0.1",
+    "unist-util-visit": "^4.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
