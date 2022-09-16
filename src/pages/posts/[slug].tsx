@@ -62,6 +62,7 @@ export const getStaticProps: GetStaticProps<Props> = ({ params }) => {
     socialImage: postFull.socialImage || null,
     body: {
       code: postFull.body.code,
+      raw: postFull.body.raw,
     },
   };
 
