@@ -2,6 +2,11 @@ import type { NextPage } from 'next';
 import { GetStaticProps } from 'next';
 import { ArticleJsonLd } from 'next-seo';
 
+import {
+  getCommandPalettePosts,
+  PostForCommandPalette,
+} from '@/components/CommandPalette/getCommandPalettePosts';
+import { useCommandPalettePostActions } from '@/components/CommandPalette/useCommandPalettePostActions';
 import PostList, { PostForPostList } from '@/components/PostList';
 import { siteConfigs } from '@/configs/siteConfigs';
 import { allPostsNewToOld } from '@/lib/contentLayerAdapter';
@@ -11,9 +16,11 @@ type PostForIndexPage = PostForPostList;
 
 type Props = {
   posts: PostForIndexPage[];
+  commandPalettePosts: PostForCommandPalette[];
 };
 
 export const getStaticProps: GetStaticProps<Props> = () => {
+  const commandPalettePosts = getCommandPalettePosts();
   const posts = allPostsNewToOld.map((post) => ({
     slug: post.slug,
     date: post.date,
@@ -24,10 +31,12 @@ export const getStaticProps: GetStaticProps<Props> = () => {
 
   generateRSS();
 
-  return { props: { posts } };
+  return { props: { posts, commandPalettePosts } };
 };
 
-const Home: NextPage<Props> = ({ posts }) => {
+const Home: NextPage<Props> = ({ posts, commandPalettePosts }) => {
+  useCommandPalettePostActions(commandPalettePosts);
+
   return (
     <>
       <ArticleJsonLd
