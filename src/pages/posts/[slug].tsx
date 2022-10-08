@@ -11,6 +11,7 @@ import PostLayout, {
   PostForPostLayout,
   RelatedPostForPostLayout,
 } from '@/components/PostLayout';
+import { LOCALES } from '@/configs/i18nConfigs';
 import { siteConfigs } from '@/configs/siteConfigs';
 import { allPosts, allPostsNewToOld } from '@/lib/contentLayerAdapter';
 import { getPostOGImage } from '@/lib/getPostOGImage';
@@ -35,7 +36,10 @@ type Props = {
 };
 
 export const getStaticPaths: GetStaticPaths = () => {
-  const paths = allPosts.map((post) => post.path);
+  const paths: string[] = [];
+  LOCALES.forEach((locale) => {
+    paths.push(...allPosts.map((post) => `/${locale}${post.path}`));
+  });
   return {
     paths,
     fallback: false,

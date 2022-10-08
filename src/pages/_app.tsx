@@ -6,6 +6,7 @@ import '@/styles/nprogress-custom.scss';
 
 import type { AppProps } from 'next/app';
 import { useRouter } from 'next/router';
+import { appWithTranslation } from 'next-i18next';
 import { DefaultSeo } from 'next-seo';
 import { ThemeProvider } from 'next-themes';
 import NProgress from 'nprogress';
@@ -85,4 +86,4 @@ function MyApp({ Component, pageProps }: AppProps) {
   );
 }
 
-export default MyApp;
+export default appWithTranslation(MyApp);

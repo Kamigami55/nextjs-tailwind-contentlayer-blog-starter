@@ -2,6 +2,7 @@ import rehypeCodeTitles from 'rehype-code-titles';
 import rehypePrism from 'rehype-prism-plus';
 import rehypeSlug from 'rehype-slug';
 
+import { DEFAULT_LOCALE, LOCALES } from './src/configs/i18nConfigs';
 import { defineDocumentType, makeSource } from './src/lib/contentLayerAdapter';
 import imageMetadata from './src/plugins/imageMetadata';
 
@@ -28,6 +29,11 @@ export const Post = defineDocumentType(() => ({
     },
     socialImage: {
       type: 'string',
+    },
+    language: {
+      type: 'enum',
+      options: LOCALES,
+      default: DEFAULT_LOCALE,
     },
   },
   computedFields: {
