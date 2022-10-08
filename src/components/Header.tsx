@@ -1,3 +1,4 @@
+import CommandPaletteToggle from '@/components/CommandPaletteToggle';
 import CustomLink from '@/components/CustomLink';
 import MobileNav from '@/components/MobileNav';
 import SectionContainer from '@/components/SectionContainer';
@@ -33,6 +34,7 @@ export default function Header() {
             </div>
 
             <ThemeSwitch />
+            <CommandPaletteToggle />
             <MobileNav />
           </div>
         </div>
