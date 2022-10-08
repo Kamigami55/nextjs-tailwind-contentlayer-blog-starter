@@ -7,6 +7,7 @@ import {
   PostForCommandPalette,
 } from '@/components/CommandPalette/getCommandPalettePosts';
 import { useCommandPalettePostActions } from '@/components/CommandPalette/useCommandPalettePostActions';
+import LayoutPerPage from '@/components/LayoutPerPage';
 import PostLayout, {
   PostForPostLayout,
   RelatedPostForPostLayout,
@@ -115,7 +116,7 @@ const PostPage: NextPage<Props> = ({
   const MDXContent = useMDXComponent(code);
 
   return (
-    <>
+    <LayoutPerPage>
       <NextSeo
         title={title}
         description={description}
@@ -150,7 +151,7 @@ const PostPage: NextPage<Props> = ({
       <PostLayout post={post} prevPost={prevPost} nextPost={nextPost}>
         <MDXContent components={mdxComponents} />
       </PostLayout>
-    </>
+    </LayoutPerPage>
   );
 };
 

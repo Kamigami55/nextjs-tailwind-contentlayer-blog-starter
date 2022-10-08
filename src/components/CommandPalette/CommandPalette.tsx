@@ -3,6 +3,7 @@
 
 import {
   HomeIcon,
+  LanguageIcon,
   LightBulbIcon,
   MagnifyingGlassIcon,
   MoonIcon,
@@ -81,6 +82,15 @@ export default function CommandPalette({ children }: Props) {
       perform: () => setTheme('dark'),
       icon: <MoonIcon className="h-6 w-6" />,
       parent: 'theme',
+      section: '操作',
+    },
+    // - Language toggle
+    {
+      id: 'language',
+      name: '切換語言',
+      keywords:
+        'change toggle locale language translation 切換 更換 語言 語系 翻譯',
+      icon: <LanguageIcon className="h-6 w-6" />,
       section: '操作',
     },
   ];

@@ -7,6 +7,7 @@ import {
   PostForCommandPalette,
 } from '@/components/CommandPalette/getCommandPalettePosts';
 import { useCommandPalettePostActions } from '@/components/CommandPalette/useCommandPalettePostActions';
+import LayoutPerPage from '@/components/LayoutPerPage';
 import PostList, { PostForPostList } from '@/components/PostList';
 import { siteConfigs } from '@/configs/siteConfigs';
 import { allPostsNewToOld } from '@/lib/contentLayerAdapter';
@@ -38,7 +39,7 @@ const Home: NextPage<Props> = ({ posts, commandPalettePosts }) => {
   useCommandPalettePostActions(commandPalettePosts);
 
   return (
-    <>
+    <LayoutPerPage>
       <ArticleJsonLd
         type="Blog"
         url={siteConfigs.fqdn}
@@ -63,7 +64,7 @@ const Home: NextPage<Props> = ({ posts, commandPalettePosts }) => {
 
         <PostList posts={posts} />
       </div>
-    </>
+    </LayoutPerPage>
   );
 };
 
