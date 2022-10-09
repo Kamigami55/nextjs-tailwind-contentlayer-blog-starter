@@ -27,6 +27,9 @@ module.exports = {
         'eason/typescript',
         'plugin:prettier/recommended', // Make this the last element so prettier config overrides other formatting rules
       ],
+      rules: {
+        '@typescript-eslint/no-non-null-assertion': 'off',
+      },
     },
   ],
 };
