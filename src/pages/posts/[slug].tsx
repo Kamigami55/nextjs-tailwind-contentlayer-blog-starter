@@ -1,6 +1,8 @@
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import { useMDXComponent } from 'next-contentlayer/hooks';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { ArticleJsonLd, NextSeo } from 'next-seo';
+import { ParsedUrlQuery } from 'querystring';
 
 import {
   getCommandPalettePosts,
@@ -36,6 +38,10 @@ type Props = {
   commandPalettePosts: PostForCommandPalette[];
 };
 
+interface Params extends ParsedUrlQuery {
+  slug: string;
+}
+
 export const getStaticPaths: GetStaticPaths = () => {
   const paths: string[] = [];
   LOCALES.forEach((locale) => {
@@ -47,12 +53,14 @@ export const getStaticPaths: GetStaticPaths = () => {
   };
 };
 
-export const getStaticProps: GetStaticProps<Props> = ({ params }) => {
+export const getStaticProps: GetStaticProps<Props, Params> = async (
+  context
+) => {
+  const { slug } = context.params!;
+  const locale = context.locale!;
   const commandPalettePosts = getCommandPalettePosts();
 
-  const postIndex = allPostsNewToOld.findIndex(
-    (post) => post.slug === params?.slug
-  );
+  const postIndex = allPostsNewToOld.findIndex((post) => post.slug === slug);
   if (postIndex === -1) {
     return {
       notFound: true,
@@ -86,6 +94,7 @@ export const getStaticProps: GetStaticProps<Props> = ({ params }) => {
   }
   return {
     props: {
+      ...(await serverSideTranslations(locale, ['common'])),
       post,
       prevPost,
       nextPost,
