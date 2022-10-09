@@ -1,9 +1,11 @@
 import { useRegisterActions } from 'kbar';
 import { useRouter } from 'next/router';
+import { useTranslation } from 'next-i18next';
 
 export const useCommandPaletteLocaleActions = () => {
   const router = useRouter();
   const { pathname, asPath, query } = router;
+  const { t } = useTranslation(['common']);
 
   const changeLocale = (locale: string) => {
     router.push({ pathname, query }, asPath, { locale: locale });
@@ -18,7 +20,7 @@ export const useCommandPaletteLocaleActions = () => {
         perform: () => changeLocale('en'),
         icon: <span className="p-1">🇺🇸</span>,
         parent: 'language',
-        section: '操作',
+        section: t('operation'),
       },
       {
         id: 'language-chinese',
@@ -28,7 +30,7 @@ export const useCommandPaletteLocaleActions = () => {
         perform: () => changeLocale('zh-TW'),
         icon: <span className="p-1">🇹🇼</span>,
         parent: 'language',
-        section: '操作',
+        section: t('operation'),
       },
     ],
     [asPath]

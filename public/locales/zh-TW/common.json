@@ -1,1 +1,19 @@
-{}
+{
+  "copied": "已複製！",
+  "table-of-contents": "目錄",
+  "home": "首頁",
+  "posts": "文章",
+  "search": "搜尋",
+  "search-posts": "搜尋文章",
+  "next-article": "下一篇文章",
+  "previous-article": "上一篇文章",
+  "published-time": "發佈時間",
+  "toggle-theme": "切換主題",
+  "dark-mode": "暗黑模式",
+  "light-mode": "明亮模式",
+  "page": "頁面",
+  "operation": "操作",
+  "toggle-language": "切換語言",
+  "english": "English",
+  "chinese": "中文"
+}

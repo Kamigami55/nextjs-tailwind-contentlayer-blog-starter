@@ -1,6 +1,7 @@
 // ref: https://philstainer.io/blog/copy-code-button-markdown
 
 import clsx from 'clsx';
+import { useTranslation } from 'next-i18next';
 import { useEffect, useRef, useState } from 'react';
 
 import { copyToClipboard } from '@/lib/copyToClipboard';
@@ -10,6 +11,7 @@ type Props = React.ComponentPropsWithoutRef<'pre'>;
 
 function CustomPre({ children, className, ...props }: Props) {
   const preRef = useRef<HTMLPreElement>(null);
+  const { t } = useTranslation(['common']);
 
   const [copied, setCopied] = useState(false);
 
@@ -39,7 +41,7 @@ function CustomPre({ children, className, ...props }: Props) {
               'group-hover:flex': copied,
             })}
           >
-            已複製！
+            {t('copied')}
           </span>
 
           <button

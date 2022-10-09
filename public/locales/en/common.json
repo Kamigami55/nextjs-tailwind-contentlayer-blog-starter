@@ -1,1 +1,19 @@
-{}
+{
+  "copied": "Copied!",
+  "table-of-contents": "Table of contents",
+  "home": "Home",
+  "posts": "Posts",
+  "search": "Search",
+  "search-posts": "Search Posts",
+  "next-article": "Next Article",
+  "previous-article": "Previous Article",
+  "published-time": "Published time",
+  "toggle-theme": "Toggle theme",
+  "dark-mode": "Dark mode",
+  "light-mode": "Light mode",
+  "page": "Page",
+  "operation": "Operation",
+  "toggle-language": "Toggle language",
+  "english": "English",
+  "chinese": "中文"
+}
