@@ -17,8 +17,10 @@ import PostLayout, {
 import { LOCALES } from '@/configs/i18nConfigs';
 import { siteConfigs } from '@/configs/siteConfigs';
 import { allPosts, allPostsNewToOld } from '@/lib/contentLayerAdapter';
+import { allRedirects } from '@/lib/getAllRedirects';
 import { getPostOGImage } from '@/lib/getPostOGImage';
 import mdxComponents from '@/lib/mdxComponents';
+import { unifyPath } from '@/lib/unifyPath';
 
 type PostForPostPage = PostForPostLayout & {
   title: string;
@@ -58,6 +60,19 @@ export const getStaticProps: GetStaticProps<Props, Params> = async (
 ) => {
   const { slug } = context.params!;
   const locale = context.locale!;
+
+  // Handle redirect logic
+  const path = unifyPath('/posts/' + slug);
+  const matchedRedirectRule = allRedirects.find((rule) => rule.source === path);
+  if (matchedRedirectRule) {
+    return {
+      redirect: {
+        destination: matchedRedirectRule.destination,
+        permanent: matchedRedirectRule.permanent,
+      },
+    };
+  }
+
   const commandPalettePosts = getCommandPalettePosts();
 
   const postIndex = allPostsNewToOld.findIndex((post) => post.slug === slug);

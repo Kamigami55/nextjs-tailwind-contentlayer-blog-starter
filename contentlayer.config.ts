@@ -35,6 +35,10 @@ export const Post = defineDocumentType(() => ({
       options: LOCALES,
       default: DEFAULT_LOCALE,
     },
+    redirectFrom: {
+      type: 'list',
+      of: { type: 'string' },
+    },
   },
   computedFields: {
     path: {
