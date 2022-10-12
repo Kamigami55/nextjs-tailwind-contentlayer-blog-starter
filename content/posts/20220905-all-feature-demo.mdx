@@ -1,0 +1,75 @@
+---
+title: All feature demo
+description: 展示所有功能
+slug: all-feature-demo
+date: 2022-09-05
+type: Post
+socialImage: /images/anita-chong-unsplash.jpg
+redirectFrom:
+  - /old-all-feature-demo/
+---
+
+## Image
+
+[![Photo by Anita Chong on Unsplash](/images/anita-chong-unsplash.jpg)](https://unsplash.com/photos/aSJAalMXCvI)
+
+> Photo by [Anita Chong](https://unsplash.com/@jacutanita) on [Unsplash](https://unsplash.com/photos/aSJAalMXCvI)
+
+---
+
+## Links
+
+Internal link [Go to homepage](/)
+
+External link [Go to Google](https://google.com)
+
+Anchor link [Go to Codes sestion](#codes)
+
+---
+
+## Codes
+
+We can write some `inline code`!
+
+```js:sample.js showLineNumbers
+const a = 1;
+a = 2;
+```
+
+```tsx:App.tsx showLineNumbers {5,15-17}
+import "@/styles/globals.css";
+
+import type { AppProps } from "next/app";
+import Head from "next/head";
+import { ThemeProvider } from "next-themes";
+
+import LayoutWrapper from "@/components/LayoutWrapper";
+
+function MyApp({ Component, pageProps }: AppProps) {
+  return (
+    <ThemeProvider attribute="class">
+      <Head>
+        <meta name="viewport" content="viewport-fit=cover" />
+      </Head>
+      <LayoutWrapper>
+        <Component {...pageProps} />
+      </LayoutWrapper>
+    </ThemeProvider>
+  );
+}
+
+export default MyApp;
+```
+
+### More codes
+
+```diff-js:some.js showLineNumbers {3-4}
+const a = 1;
+- a = 2;
++ a = 2;
+a = 3;
+```
+
+```shell:Command
+$ echo "Hello world!"
+```
