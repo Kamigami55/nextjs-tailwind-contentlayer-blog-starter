@@ -11,7 +11,7 @@
     "format:fix": "prettier --write './**/*.{css,scss,md,mdx,json}'"
   },
   "dependencies": {
-    "@giscus/react": "^2.2.0",
+    "@giscus/react": "^2.2.6",
     "@heroicons/react": "^2.0.11",
     "clsx": "^1.2.1",
     "contentlayer": "^0.2.7",
